@@ -9,8 +9,8 @@ import "fmt"
 
 //A struct to represent the interval in each node
 type Interval struct {
-	low    int
-  high   int
+	low  int
+	high int
 }
 
 //A struct to represent a node in interval search tree
@@ -24,9 +24,9 @@ type ITVNode struct {
 func NewITVNode(i Interval) *ITVNode {
 	return &ITVNode{
 		interval: i,
-		max:   i.high,
-		left:  nil,
-		right: nil,
+		max:      i.high,
+		left:     nil,
+		right:    nil,
 	}
 }
 
@@ -88,14 +88,14 @@ func search(res []Interval, root *ITVNode, i Interval) []Interval {
 
 func main() {
 	x := []Interval{
-    Interval{low: 1, high: 2},
+		Interval{low: 1, high: 2},
 		Interval{low: 1, high: 3},
-    Interval{low:4, high: 5},
-		Interval{low:3, high: 6},
-		Interval{low:2, high: 8},
-		Interval{low:10, high: 100},
-  }
-  var root *ITVNode
+		Interval{low: 4, high: 5},
+		Interval{low: 3, high: 6},
+		Interval{low: 2, high: 8},
+		Interval{low: 10, high: 100},
+	}
+	var root *ITVNode
 	res := make(map[Interval][]Interval)
 
 	//insert into trees
